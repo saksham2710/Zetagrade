@@ -1,1 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;  background-color: #0e2433; /* Background */
+    color: #ffffff; 
+  }
+
+/* Style for the Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Bigger Logo Image */
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Slightly Smaller Logo Text */
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px; /* Slightly smaller than icon */
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Zeta = Aqua, Grade = Navy */
+.logo a span:first-child {
+    color: #4EC3FA;
+}
+
+.logo a span:last-child {
+    color: #1D2D50;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+    background: #00A3E0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100; /* higher than navbar */
+  }
+
+.announcement-bar a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Navbar Styling */
+nav {
+    background: linear-gradient(135deg, #EAF6FF, #FFFFFF);
+    padding: 15px 40px; 
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    position: fixed;
+    top: 36px; /* announcement bar height */
+    width: 100%;
+    z-index: 1000; /* below announcement */
+}
+
+/* Container for Logo and Links */
+.nav-container {
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #001F6D;
+    gap: 8px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo .zeta {
+    color: #00A3E0;
+}
+
+.logo .grade {
+    color: #001F6D;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #00A3E0;
+}
+
+
+  /* Hamburger Button - Hidden by default */
+  .hamburger {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none; /* hidden by default */
+  }
+  
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu (Hidden by Default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 999;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown Items */
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+  color: #00A3E0;
+}
+
+
+
+/* Contact Us Button */
+.contact-btn {
+    background-color: transparent;
+    color: #001F6D;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #001F6D;
+    border-radius: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-btn:hover {
+    background-color: #001F6D;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 31, 109, 0.2);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin:140px auto;
+  height: 140vh;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background-color: transparent;
+  text-align: left;
+  padding-left: 50px;
+  position: relative;
+}
+
+.number {
+  background-color: #12283b;
+  color: #f89c1f;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card h2 {
+  margin-left: 70px;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.card p {
+  margin-left: 70px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d8d8d8;
+}
+
+
+
+
+
+
+ /* Footer */
+  
+
+ .footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 4rem 2rem 2rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-container {
+    display: grid;
+    height: 20vh;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+  }
+  
+  .footer-column ul li a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .footer-socials img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+  }
+  
+  .footer-socials img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+  
+  .footer-bottom a {
+    color: #38bdf8;
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 1024px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #001F6D;
+  }
+
+  .mobile-menu.active {
+    display: block;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .mobile-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mobile-links a {
+    color: #001F6D;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .contact-btn {
+    margin-top: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card h2, .card p {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo a {
+    font-size: 24px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .container {
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  .number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-column ul {
+    padding-left: 0;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
 
